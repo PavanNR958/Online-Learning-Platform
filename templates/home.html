@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Online Learning Platform</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #007dfb;
+            font-family: Arial, sans-serif;
+        }
+
+        .advanced-heading {
+            text-align: center;
+            background-color: #2d85e3;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 15px;
+            color: #fbfcfc;
+        }
+
+        .container {
+            margin-top: 20px;
+        }
+
+        .card {
+            border: none;
+            border-radius: 15px;
+            background-color: #fcfbfb;
+            transition: transform 0.2s;
+            margin: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+        }
+
+        .card-img-top {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .card-title {
+            text-align: center;
+            font-size: 24px;
+        }
+
+        .btn-primary {
+            background-color: #3300ff;
+            color: #fff;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #0004ff;
+        }
+
+        .btn-success {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+        }
+
+        .btn-info {
+            background-color: #4ed6eb;
+            color: #fff;
+            border: none;
+        }
+
+        footer {
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            background-color: #6a6a6a;
+            color: #ffffff;
+            padding: 15px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Online Learning Platform</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('signup') }}">Sign Up</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('teacher_login') }}">Teacher Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('student_login') }}">Student Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://cdn.dribbble.com/users/277921/screenshots/4223608/gw-dribbble.gif"
+                        class="card-img-top" alt="Sign Up">
+                    <div class="card-body">
+
+                        <a href="{{ url_for('signup') }}" class="btn btn-primary btn-block">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row mt-3 justify-content-center">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://www.studiorinternational.in/Unisec%20Publications/images/Tlogin.png"
+                    class="card-img-top mx-auto d-block" alt="Student Login" style="width: 300px; height: 200px;">
+                <div class="card-body">
+                    <h3 class="card-title text-center">Teacher Login</h3>
+                    <a href="{{ url_for('teacher_login') }}" class="btn btn-success btn-block">Login</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://cdn.dribbble.com/users/1681709/screenshots/4735856/gif.gif"
+                    class="card-img-top mx-auto d-block" alt="Teacher Login" style="width: 300px; height: 200px;">
+                <div class="card-body">
+                    <h3 class="card-title text-center">Student Login</h3>
+                    <a href="{{ url_for('student_login') }}" class="btn btn-info btn-block">Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+
+    <footer>
+        &copy; All rights reserved.
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
